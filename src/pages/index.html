@@ -1,0 +1,817 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="images" href="images/favicon-32x32.png" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png"> -->
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Pet Project - Green Spaces</title>
+  </head>
+  <body class="relative">
+    <header class="relative" id="header">
+      <!-- container for navigation -->
+      <div class="fixed z-40 top-0 right-0 left-0 bg-black bg-opacity-65">
+        <!-- container for top bar -->
+        <div
+          class="container mx-auto flex items-center justify-between px-6 py-4 space-x-6"
+        >
+          <!-- logo -->
+          <div class="w-20 h-20">
+            <img src="/images/logo-icon.svg" alt="" />
+          </div>
+          <!-- nav -->
+          <nav>
+            <ul
+              class="hidden md:flex items-center justify-center space-x-16"
+            >
+              <li>
+                <a
+                  href="#aboutUs"
+                  class="text-white text-2xl hover:text-grayishLimeGreen nav-link"
+                  >O nas</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#service"
+                  class="text-white text-2xl hover:text-grayishLimeGreen nav-link"
+                  >Usługi</a
+                >
+              </li>
+              <li>
+                <a 
+                  id="nav-link-gallery"
+                  href="#gallery"
+                  class="text-white text-2xl hover:text-grayishLimeGreen nav-link"
+                  >Galeria</a
+                >
+              </li>
+            </ul>
+            <!-- Menu Icon -->
+            <button id="menu-btn"
+            class="block md:hidden focus:outline-none hamburger">
+              <span class="hamburger-top"></span>
+              <span class="hamburger-middle"></span>
+              <span class="hamburger-bottom"></span>
+            </button>
+          </nav>
+          <!-- contact btn -->
+          <div
+            class="hidden md:block border border-white hover:border-grayishLimeGreen text-white hover:text-grayishLimeGreen rounded-md px-6 py-3 text-center"
+          >
+            <a href="/src/pages/contact.html" class="text-2xl nav-link">Kontakt</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- container for hero section -->
+      <section id="aboutUs">
+        <!-- container for hero info -->
+        <div class="container mx-auto pt-40 px-6">
+          <div
+            class="flex justify-between space-x-8 bg-black bg-opacity-60 rounded-t-md"
+          >
+            <!-- Text -->
+            <div
+              class="flex flex-col justify-center md:justify-start max-w-xl md:space-y-20 space-y-16 px-6 pt-8 pb-14"
+            >
+              <!-- 1st block -->
+              <div
+                class="flex flex-col text-center text-4xl md:text-5xl md:text-left space-y-10"
+              >
+                <h1 class="text-white">
+                  Witaj w
+                  <div class="flex flex-col md:space-x-4 md:flex-row">
+                    <p class="font-bold text-grayishLimeGreen">Green</p>
+                    <p class="font-bold text-grayishLimeGreen">Spaces</p>
+                  </div>
+                  <!-- <span class="font-bold text-grayishLimeGreen"
+                    >Green Spaces</span
+                  > -->
+                </h1>
+                <!-- word box -->
+                <div id="container" class="text-4xl md:text-5xl text-white">
+                  Nasza pasja to
+                  <div
+                    id="flip"
+                    class="h-[55px] overflow-hidden text-grayishLimeGreen italic"
+                  >
+                    <div class="animate-words">
+                      <div class="inline-block h-[45px] mb-[45px] py-1">
+                        pielęgnacja
+                      </div>
+                    </div>
+                    <div>
+                      <div class="inline-block h-[45px] mb-[45px] py-1">
+                        zakładanie
+                      </div>
+                    </div>
+                    <div>
+                      <div class="inline-block h-[45px] mb-[45px] py-1">
+                        projektowanie
+                      </div>
+                    </div>
+                  </div>
+                  ogrodów
+                </div>
+              </div>
+
+              <!-- 2nd block -->
+              <div
+                class="flex items-center md:items-start text-center md:text-left flex-col space-y-10"
+              >
+                <p class="md:text-2xl text-white">
+                  Dołącz do naszej rodziny klientów i razem stwórzmy
+                  przestrzenie, które będą cieszyć oko i odprężać zmysły.
+                </p>
+                <!-- contact btn -->
+                <div
+                  class="w-40 border border-white hover:border-grayishLimeGreen text-white hover:text-grayishLimeGreen rounded-md px-6 py-3 text-center"
+                >
+                  <a href="/src/pages/contact.html" class="text-2xl">Kontakt</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="hidden md:flex items-end justify-end max-w-md">
+              <img
+                src="/images/magnolia.jpg"
+                alt=""
+                class="h-full rounded-tr-md rounded-bl-[150px]"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <!-- hamburger menu -->
+    <div id="menu" class="z-10 fixed inset-0 hidden justify-center items-start w-full h-full p-6 bg-black bg-opacity-40">
+      <nav class="w-96 mt-32 bg-grayishLimeGreen space-y-5 py-8 rounded-lg
+      animate__animated animate__fadeInDown">
+          <!-- 1st block -->
+          <ul class="mb-10 flex flex-col items-center justify-center space-y-6 text-white text-2xl font-light">
+              <li>
+                  <a href="#aboutUs">O nas</a>
+              </li>
+              <li>
+                  <a href="#service">Usługi</a>
+              </li>
+              <li>
+                <a href="#gallery">Galeria</a>
+            </li>
+          </ul>
+          <div
+            class="hover:scale-105 text-white rounded-md text-center"
+          >
+              <a href="/src/pages/contact.html" class="border border-white rounded-md text-2xl px-6 py-3">Kontakt</a>
+          </div>
+      </nav>
+    </div>
+
+    <!-- Service tabs -->
+    <section id="tabs" class="bg-grayishWhite">
+      <div id="service" class="container mx-auto pb-10 pt-14 px-6 md:pb-32">
+        <!-- Tabs Flex Container -->
+        <div
+          class="flex flex-col justify-center mx-auto bg-grayishLimeGreen rounded-lg mb-6 md:space-x-2 md:flex-row text-2xl"
+        >
+          <!-- Tab 1 -->
+          <div
+            class="flex justify-center items-center text-center cursor-pointer text-white hover:text-darkGrayishLimeGreen border-b-0 md:w-1/3 tab"
+            data-target="panel-1"
+          >
+            <div
+              class="py-5 border-b-4 border-darkGrayishLimeGreen"
+              data-target="panel-1"
+            >
+              Zakładanie ogrodów
+            </div>
+          </div>
+
+          <!-- Tab 2 -->
+          <div
+            class="flex justify-center items-center text-center cursor-pointer text-white hover:text-darkGrayishLimeGreen border-b-0 md:w-1/3 tab"
+            data-target="panel-2"
+          >
+            <div class="py-5" data-target="panel-2">Modernizacja</div>
+          </div>
+
+          <!-- Tab 3 -->
+          <div
+            class="flex justify-center items-center text-center cursor-pointer text-white hover:text-darkGrayishLimeGreen border-b-0 md:w-1/3 tab"
+            data-target="panel-3"
+          >
+            <div class="py-5" data-target="panel-3">Pielęgnacja ogrodu</div>
+          </div>
+
+          <!-- Tab 4-->
+          <div
+            class="flex justify-center items-center text-center cursor-pointer text-white hover:text-darkGrayishLimeGreen border-b-0 md:w-1/3 tab"
+            data-target="panel-4"
+          >
+            <div class="py-5" data-target="panel-4">System Nawadniania</div>
+          </div>
+        </div>
+
+        <!-- Tab panels -->
+        <div id="panels" class="container mx-auto md:px-6 mt-4 md:mt-20">
+          <!-- panel 1 -->
+          <div
+            class="flex flex-col py-5 md:flex-row md:space-x-14 panel panel-1"
+          >
+            <!-- images -->
+            <div class="flex space-x-3 justify-center">
+              <!-- 1/2 images -->
+              <div
+                class="flex flex-row space-x-3 md:space-x-0 md:flex-col md:space-y-3"
+              >
+                <div>
+                  <img
+                    class="shadow w-60 h-44 rounded-md"
+                    src="/images/panel-tabs.1.3.jpg"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    class="shadow w-60 h-44 rounded-md"
+                    src="/images/panel-tabs.1.2.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <!-- 3rd image -->
+              <div class="hidden md:block">
+                <img
+                  class="shadow w-60 h-full rounded-md"
+                  src="/images/panel-tabs.1.1.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <!-- panel content -->
+            <div
+              class="flex flex-col md:w-1/2 text-darkGrayishLimeGreen text-center space-y-8 md:text-left md:space-y-20"
+            >
+              <h3 class="mt-8 text-2xl font-bold md:mt-0">
+                Zakładanie ogrodów
+              </h3>
+              <p class="md:text-lg">
+                Zakładanie ogrodów to kompleksowe usługi obejmujące
+                projektowanie ogrodu i jego pielęgnację, tworząc piękne
+                przestrzenie na świeżym powietrzu. Profesjonaliści w tej branży
+                pomagają klientom stworzyć unikatowe ogrody, dostosowane do ich
+                potrzeb i estetycznych upodobań
+              </p>
+            </div>
+          </div>
+          <!-- panel 2-->
+          <div
+            class="flex hidden flex-col py-5 md:flex-row md:space-x-14 panel panel-2"
+          >
+            <!-- images -->
+            <div class="flex justify-center space-x-3">
+              <!-- 1/2 images -->
+              <div
+                class="flex flex-row space-x-3 md:space-x-0 md:flex-col md:space-y-3"
+              >
+                <div>
+                  <img
+                    class="shadow w-60 h-44 rounded-md"
+                    src="/images/panel-tabs.2.1.jpg"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    class="shadow w-60 h-44 rounded-md"
+                    src="/images/panel-tabs.2.2.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <!-- 3rd image -->
+              <div class="hidden md:block">
+                <img
+                  class="shadow w-60 h-full rounded-md"
+                  src="/images/panel-tabs.2.3.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <!-- panel content -->
+            <div
+              class="flex flex-col md:w-1/2 text-darkGrayishLimeGreen text-center space-y-8 md:text-left md:space-y-20"
+            >
+              <h3 class="mt-8 text-2xl font-bold md:mt-0">Modernizacja</h3>
+              <p class="md:text-lg">
+                Ogrodowa modernizacja to kompleksowe usługi, które ożywiają
+                przestrzenie na świeżym powietrzu poprzez nowoczesne projekty i
+                modernizację elementów architektonicznych, dążąc do większej
+                efektywności i ekologiczności ogrodu. Efektem są funkcjonalne,
+                estetyczne i ekologiczne przestrzenie na świeżym powietrzu
+              </p>
+            </div>
+          </div>
+
+          <!-- panel 3-->
+          <div
+            class="flex hidden flex-col py-5 md:flex-row md:space-x-14 panel panel-3"
+          >
+            <!-- images -->
+            <div class="flex justify-center space-x-3">
+              <!-- 1/2 images -->
+              <div
+                class="flex flex-row space-x-3 md:space-x-0 md:flex-col md:space-y-3"
+              >
+                <div>
+                  <img
+                    class="shadow w-60 h-44 rounded-md"
+                    src="/images/panel-tabs.3.1.jpg"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    class="shadow w-60 h-44 rounded-md"
+                    src="/images/panel-tabs.3.2.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <!-- 3rd image -->
+              <div class="hidden md:block">
+                <img
+                  class="shadow w-60 h-full rounded-md"
+                  src="/images/panel-tabs.3.3.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <!-- panel content -->
+            <div
+              class="flex flex-col md:w-1/2 text-darkGrayishLimeGreen text-center space-y-8 md:text-left md:space-y-20"
+            >
+              <h3 class="mt-8 text-2xl font-bold md:mt-0">
+                Pielęgnacja ogrodu
+              </h3>
+              <p class="md:text-lg">
+                Pielęgnacja ogrodu to usługi dbania o rośliny, trawnik i ogólną
+                kondycję ogrodu, w tym koszenie trawnika, przycinanie roślin i
+                usuwanie chwastów. Specjaliści oferują kompleksowe usługi, by
+                utrzymać ogród w doskonałym stanie
+              </p>
+            </div>
+          </div>
+
+          <!-- panel 4-->
+          <div
+            class="flex hidden flex-col py-5 md:flex-row md:space-x-14 panel panel-4"
+          >
+            <!-- images -->
+            <div class="flex justify-center space-x-3">
+              <!-- 1/2 images -->
+              <div
+                class="flex flex-row space-x-3 md:space-x-0 md:flex-col md:space-y-3"
+              >
+                <div>
+                  <img
+                    class="shadow w-60 h-44 rounded-md"
+                    src="/images/panel-tabs.4.1.jpg"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    class="shadow w-60 h-44 rounded-md"
+                    src="/images/panel-tabs.4.3.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <!-- 3rd image -->
+              <div class="hidden md:block">
+                <img
+                  class="shadow w-60 h-full rounded-md"
+                  src="/images/panel-tabs.4.2.2.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <!-- panel content -->
+            <div
+              class="flex flex-col md:w-1/2 text-darkGrayishLimeGreen text-center space-y-8 md:text-left md:space-y-20"
+            >
+              <h3 class="mt-8 text-2xl font-bold md:mt-0">
+                System Nawadniania
+              </h3>
+              <p class="md:text-lg">
+                Usługi związane z systemem nawadniania ogrodu obejmują
+                projektowanie i instalację efektywnych systemów nawadniających,
+                które automatycznie dostarczają odpowiednią ilość wody roślinom.
+                Dzięki nim ogród pozostaje piękny i zdrowy, a właściciele
+                oszczędzają czas i wodę. To doskonałe rozwiązanie dla utrzymania
+                ogrodu w doskonałej kondycji
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="bg-white mt-16 mb-20 flex flex-col items-center">
+      <h1 class="text-darkGrayishLimeGreen text-5xl text-center">Galeria</h1>
+      <!-- container for gallery -->
+      <div class="container mx-auto px-6 pt-20 pb-20">
+        <!-- container for box -->
+        <div class="flex flex-wrap justify-center md:gap-4 gap-y-8">
+
+          <!-- 1st box -->
+          <div
+            class="gallery group item w-[400px] h-[300px] cursor-pointer rounded-lg overflow-hidden"
+            onclick="openLightbox(event)"
+          >
+            <img
+              class="w-full h-full rounded-lg duration-200 ease-linear group-hover:scale-110"
+              src="/images/block1/gallery-box.1.jpg"
+              alt=""
+            />
+            <img class="sub-img" src="/images/block1/gallery-box2.jpg" alt="" />
+            <img class="sub-img" src="/images/block1/gallery-box3.jpg" alt="" />
+            <img class="sub-img" src="/images/block1/gallery-box4.jpg" alt="" />
+            <img class="sub-img" src="/images/block1/gallery-box5.jpg" alt="" />
+
+            <div
+              class="flex flex-col space-y-10 justify-end items-center middle bg-black bg-opacity-50 absolute inset-0 duration-200 ease-linear pointer-events-none"
+              onclick="stopPropagation(event) "
+            >
+              <svg
+                class="w-16 h-16 hover:scale-105"
+                width="60"
+                height="60"
+                viewBox="0 0 60 60"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="30" cy="30" r="30" fill="#FEFEFE" />
+                <g clip-path="url(#clip0_125_31)">
+                  <path
+                    d="M27.25 30C27.25 30.7293 27.5397 31.4288 28.0555 31.9445C28.5712 32.4603 29.2707 32.75 30 32.75C30.7293 32.75 31.4288 32.4603 31.9445 31.9445C32.4603 31.4288 32.75 30.7293 32.75 30C32.75 29.2707 32.4603 28.5712 31.9445 28.0555C31.4288 27.5397 30.7293 27.25 30 27.25C29.2707 27.25 28.5712 27.5397 28.0555 28.0555C27.5397 28.5712 27.25 29.2707 27.25 30Z"
+                    stroke="#2C3E50"
+                    stroke-width="2.75"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M42.375 30C39.075 35.5 34.95 38.25 30 38.25C25.05 38.25 20.925 35.5 17.625 30C20.925 24.5 25.05 21.75 30 21.75C34.95 21.75 39.075 24.5 42.375 30Z"
+                    stroke="#2C3E50"
+                    stroke-width="2.75"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_125_31">
+                    <rect
+                      width="33"
+                      height="33"
+                      fill="white"
+                      transform="translate(13.5 13.5)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+              <p class="text-white text-center text-2xl pt-8 pb-4">
+                Realizacja ogrodu, Kreczki
+              </p>
+            </div>
+          </div>
+
+          <!-- 2nd box -->
+          <div
+            class="gallery group item w-[400px] h-[300px] cursor-pointer rounded-lg overflow-hidden"
+            onclick="openLightbox(event)"
+          >
+            <img
+              class="w-full h-full rounded-lg duration-200 ease-linear group-hover:scale-110"
+              src="/images/block2/gallery-box1.jpg"
+              alt=""
+            />
+            <img class="sub-img" src="/images/block2/gallery-box2.jpg" alt="" />
+            <img class="sub-img" src="/images/block2/gallery-box3.jpg" alt="" />
+            <img
+              class="sub-img"
+              src="/images/block2//gallery-box4.jpg"
+              alt=""
+            />
+            <img
+              class="sub-img"
+              src="/images/block2//gallery-box5.jpg"
+              alt=""
+            />
+
+            <div
+              class="flex flex-col space-y-10 justify-end items-center middle bg-black bg-opacity-50 absolute inset-0 duration-200 ease-linear pointer-events-none"
+              onclick="stopPropagation(event) "
+            >
+              <svg
+                class="w-16 h-16 hover:scale-105"
+                width="60"
+                height="60"
+                viewBox="0 0 60 60"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="30" cy="30" r="30" fill="#FEFEFE" />
+                <g clip-path="url(#clip0_125_31)">
+                  <path
+                    d="M27.25 30C27.25 30.7293 27.5397 31.4288 28.0555 31.9445C28.5712 32.4603 29.2707 32.75 30 32.75C30.7293 32.75 31.4288 32.4603 31.9445 31.9445C32.4603 31.4288 32.75 30.7293 32.75 30C32.75 29.2707 32.4603 28.5712 31.9445 28.0555C31.4288 27.5397 30.7293 27.25 30 27.25C29.2707 27.25 28.5712 27.5397 28.0555 28.0555C27.5397 28.5712 27.25 29.2707 27.25 30Z"
+                    stroke="#2C3E50"
+                    stroke-width="2.75"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M42.375 30C39.075 35.5 34.95 38.25 30 38.25C25.05 38.25 20.925 35.5 17.625 30C20.925 24.5 25.05 21.75 30 21.75C34.95 21.75 39.075 24.5 42.375 30Z"
+                    stroke="#2C3E50"
+                    stroke-width="2.75"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_125_31">
+                    <rect
+                      width="33"
+                      height="33"
+                      fill="white"
+                      transform="translate(13.5 13.5)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+              <p class="text-white text-center text-2xl pt-8 pb-4">
+                Realizacja ogrodu, Wilanow
+              </p>
+            </div>
+          </div>
+
+          <!-- 3rd box -->
+          <div
+            class="gallery group item w-[400px] h-[300px] cursor-pointer rounded-lg overflow-hidden"
+            onclick="openLightbox(event)"
+          >
+            <img
+              class="w-full h-full rounded-lg duration-200 ease-linear group-hover:scale-110"
+              src="/images/block3/gallery-box1.jpg"
+              alt=""
+            />
+            <img class="sub-img" src="/images/block3/gallery-box2.jpg" alt="" />
+            <img class="sub-img" src="/images/block3/gallery-box3.jpg" alt="" />
+            <img
+              class="sub-img"
+              src="/images/block3//gallery-box4.jpg"
+              alt=""
+            />
+            <img
+              class="sub-img"
+              src="/images/block3//gallery-box5.jpg"
+              alt=""
+            />
+            <img
+              class="sub-img"
+              src="/images/block3//gallery-box6.jpg"
+              alt=""
+            />
+            <img
+              class="sub-img"
+              src="/images/block3//gallery-box5.jpg"
+              alt=""
+            />
+
+            <div
+              class="flex flex-col space-y-10 justify-end items-center middle bg-black bg-opacity-50 absolute inset-0 duration-200 ease-linear pointer-events-none"
+              onclick="stopPropagation(event) "
+            >
+              <svg
+                class="w-16 h-16 hover:scale-105"
+                width="60"
+                height="60"
+                viewBox="0 0 60 60"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="30" cy="30" r="30" fill="#FEFEFE" />
+                <g clip-path="url(#clip0_125_31)">
+                  <path
+                    d="M27.25 30C27.25 30.7293 27.5397 31.4288 28.0555 31.9445C28.5712 32.4603 29.2707 32.75 30 32.75C30.7293 32.75 31.4288 32.4603 31.9445 31.9445C32.4603 31.4288 32.75 30.7293 32.75 30C32.75 29.2707 32.4603 28.5712 31.9445 28.0555C31.4288 27.5397 30.7293 27.25 30 27.25C29.2707 27.25 28.5712 27.5397 28.0555 28.0555C27.5397 28.5712 27.25 29.2707 27.25 30Z"
+                    stroke="#2C3E50"
+                    stroke-width="2.75"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M42.375 30C39.075 35.5 34.95 38.25 30 38.25C25.05 38.25 20.925 35.5 17.625 30C20.925 24.5 25.05 21.75 30 21.75C34.95 21.75 39.075 24.5 42.375 30Z"
+                    stroke="#2C3E50"
+                    stroke-width="2.75"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_125_31">
+                    <rect
+                      width="33"
+                      height="33"
+                      fill="white"
+                      transform="translate(13.5 13.5)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+              <p class="text-white text-center text-2xl pt-8 pb-4">
+                Realizacja ogrodu, Nowe Falenty
+              </p>
+            </div>
+          </div>
+
+          <!-- Lightbox container -->
+          <div id="lightbox">
+            <!-- close button -->
+            <span class="rounded-full" id="close-btn" onclick="closeLightbox()">
+              <svg
+                class="p-2"
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-x"
+                width="44"
+                height="44"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="#2c3e50"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M18 6l-12 12" />
+                <path d="M6 6l12 12" />
+              </svg>
+            </span>
+
+            <!-- Main lightbox image -->
+            <img
+              class="lightbox-image"
+              id="lightbox-img"
+              src=""
+              alt="lightbox image"
+            />
+
+            <!-- Thumbnails container -->
+            <div id="thumbnail-container"></div>
+
+            <!-- Previous and Next buttons -->
+            <button class="md:block " id="prev-btn" onclick="changeImage(-1)">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-arrow-big-left-filled
+                hover:scale-105"
+                width="44"
+                height="44"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="#2c3e50"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M9.586 4l-6.586 6.586a2 2 0 0 0 0 2.828l6.586 6.586a2 2 0 0 0 2.18 .434l.145 -.068a2 2 0 0 0 1.089 -1.78v-2.586h7a2 2 0 0 0 2 -2v-4l-.005 -.15a2 2 0 0 0 -1.995 -1.85l-7 -.001v-2.585a2 2 0 0 0 -3.414 -1.414z"
+                  stroke-width="0"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+            <button class="md:block " id="next-btn" onclick="changeImage(1)">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-arrow-big-right-filled
+                hover:scale-105"
+                width="44"
+                height="44"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="#2c3e50"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M12.089 3.634a2 2 0 0 0 -1.089 1.78l-.001 2.586h-6.999a2 2 0 0 0 -2 2v4l.005 .15a2 2 0 0 0 1.995 1.85l6.999 -.001l.001 2.587a2 2 0 0 0 3.414 1.414l6.586 -6.586a2 2 0 0 0 0 -2.828l-6.586 -6.586a2 2 0 0 0 -2.18 -.434l-.145 .068z"
+                  stroke-width="0"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- link full gallery -->
+      <div class="max-w-52 border border-darkGrayishLimeGreen bg-white text-darkGrayishLimeGreen rounded-lg text-center px-4 py-3
+      hover:bg-darkGrayishLimeGreen hover:text-white ease-linear duration-150 hover:scale-105">
+        <a id="link-gallery" href="/src/pages/fullGallery.html" class="text-2xl nav-link">Pokaż wszystkie</a>
+      </div>
+    </section>
+
+    <!-- CTA section -->
+    <section id="cta-hero" class="container flex flex-col items-center mx-auto px-6 mt-10 mb-20
+    bg-black bg-opacity-50">
+      <!-- container for element -->
+      <div class="absolute flex flex-col items-center text-center rounded-lg inset-0 bg-black bg-opacity-30">
+        <h1 class="mt-8 text-white text-5xl">Pracujmy razem</h1>
+        <div
+            class="md:mt-16 mt-8 border border-white hover:scale-105 text-white rounded-md px-6 py-3 text-center"
+          >
+            <a href="/src/pages/contact.html" class="md:text-3xl text-2xl">Kontakt</a>
+          </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer id="footer" class="bg-raven ">
+      <div class="container mx-auto flex flex-col space-y-12 items-center justify-between py-12 px-6
+      md:flex-row md:space-x-6 md:space-y-0">
+        <!-- logo -->
+        <div class="w-20 h-20">
+          <img src="/images/logo-icon.svg" alt="" />
+        </div>
+        <!-- nav -->
+        <nav>
+          <ul
+            class="flex flex-col space-y-6 items-center justify-center md:flex-row md:space-x-16 md:space-y-0"
+          >
+            <li>
+              <a
+                href="#aboutUs"
+                class="text-white text-2xl hover:text-grayishLimeGreen"
+                >O nas</a
+              >
+            </li>
+            <li>
+              <a
+                href="#service"
+                class="text-white text-2xl hover:text-grayishLimeGreen"
+                >Usługi</a
+              >
+            </li>
+            <li>
+              <a
+                href="#gallery"
+                class="text-white text-2xl hover:text-grayishLimeGreen"
+                >Galeria</a
+              >
+            </li>
+            <li>
+              <a
+                href="/src/pages/contact.html"
+                class="text-white text-2xl hover:text-grayishLimeGreen"
+                >Kontakt</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <!-- socila media-->
+        <div
+          class="flex space-x-6 items-center"
+        >
+          <img class="ficon w-10 h-10" src="/images/facebook.svg" alt="">
+          <img class="ficon w-10 h-10" src="/images/gmail.svg" alt="">
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/src/js/gallery.js"></script>
+    <script src="/src/js/app.js"></script>
+  </body>
+</html>
