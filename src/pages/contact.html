@@ -20,7 +20,7 @@
     <title>Pet Project - Full Page of Gallery</title>
   </head>
   <body class="relative">
-    <header class="relative">
+    <header class="relative" id="header">
       <!-- container for navigation -->
       <div class="fixed z-40 top-0 right-0 left-0 bg-black bg-opacity-65">
         <!-- container for top bar -->
@@ -74,6 +74,59 @@
           </div>
         </div>
       </div>
+       <!-- Contact form -->
+        <section id="contact" class="pt-40">
+          <!-- container for contact form -->
+          <div class="container mx-auto px-6">
+              <div class=" flex flex-col items-center space-y-10 py-10 px-6  bg-black bg-opacity-70 rounded-lg
+              md:flex-row md:space-x-10 md:space-y-0">
+                  <!-- text container/social media -->
+                  <div class="max-w-96 flex flex-col items-center justify-center space-y-10 text-center md:items-start md:space-y-24 md:text-left">
+                      <div class="text-white">
+                          <h1 class="text-4xl md:text-6xl">Porozmawiajmy</h1>
+                          <p class="mt-3 text-2xl">Zapytaj nas o cokolwiek lub po prostu się przywitaj...</p>
+                      </div>
+                      <!-- socila media-->
+                      <div
+                      class="flex space-x-4 items-center" >
+                          <img class="ficon w-10 h-10" src="/images/facebook.svg" alt="">
+                          <img class="ficon w-10 h-10" src="/images/gmail.svg" alt="">
+                      </div>
+                  </div>
+                  <!-- submit form -->
+                  <div class="w-full py-10 flex items-start justify-center">
+                      <form id="form" class="md:w-1/2 flex flex-col space-y-6">
+                          <div class="flex flex-col space-y-2 input-control">
+                              <label class="text-xl font-bold text-white" for="name">Imię</label>
+                              <input id="name" type="text" placeholder="Imię" class="w-full text-darkGrayishLimeGreen text-lg p-4 border-b border-white rounded-lg focus:border-white placeholder:text-grayishLimeGreen placeholder:text-opacity-70 focus:outline-none">
+                              <div class="error italic text-lg"></div>
+                          </div>
+
+                          <div class="flex flex-col space-y-2 input-control">
+                              <label class="text-xl font-bold text-white" for="email">E-mail</label>
+                              <input id="email" type="text" placeholder="E-mail" class="w-full text-darkGrayishLimeGreen text-lg p-4 border-b border-white rounded-lg focus:border-white placeholder:text-grayishLimeGreen placeholder:text-opacity-70 focus:outline-none">
+                              <div class="error italic text-lg"></div>
+                          </div>
+
+                          <div class="flex flex-col space-y-2 input-control">
+                              <label class="text-xl font-bold text-white" for="Name">Name</label>
+                              <textarea name="Wiadomość" id="message" cols="3" rows="2" placeholder="Wiadomość"
+                              class="w-full text-darkGrayishLimeGreen text-lg p-4 border-b border-white rounded-lg focus:border-white placeholder:text-grayishLimeGreen placeholder:text-opacity-70 focus:outline-none"></textarea>
+                              <div class="error italic text-lg"></div>
+                          </div>
+
+                          <div class="w-full flex items-center justify-center input-control md:justify-start">
+                              <button type="submit" class="px-9 py-3 text-xl text-grayishLimeGreen border-2 tracking-wide border-white bg-white rounded-full 
+                              hover:text-white hover:bg-darkGrayishLimeGreen hover:border-darkGrayishLimeGreen hover:scale-110 duration-500 ease">
+                                  submit
+                              </button>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </section>
+<!-- </section> -->
     </header>
 
     <!-- hamburger menu -->
@@ -100,63 +153,9 @@
       </nav>
     </div>
 
-   <!-- Contact form -->
-   <section id="contact" class="mt-60 mb-40">
-        <!-- container for contact form -->
-        <div class="container mx-auto px-6">
-            <div class="shadow-contact flex flex-col items-center space-y-10 py-20 px-6 bg-grayishLimeGreen rounded-lg
-            md:flex-row md:space-x-10 md:space-y-0">
-                <!-- text container/social media -->
-                <div class="max-w-96 flex flex-col items-center justify-center space-y-10 text-center md:items-start md:space-y-24 md:text-left">
-                    <div class="text-white">
-                        <h1 class="text-4xl md:text-5xl">Porozmawiajmy</h1>
-                        <p class="mt-3 text-xl">Zapytaj nas o cokolwiek lub po prostu się przywitaj...</p>
-                    </div>
-                    <!-- socila media-->
-                    <div
-                    class="flex space-x-4 items-center" >
-                        <img class="ficon w-10 h-10" src="/images/facebook.svg" alt="">
-                        <img class="ficon w-10 h-10" src="/images/gmail.svg" alt="">
-                    </div>
-                </div>
-                <!-- submit form -->
-                <div class="w-full flex items-start justify-center">
-                    <form id="form" class="md:w-1/2 flex flex-col space-y-6">
-                        <div class="flex flex-col space-y-2 input-control">
-                            <label class="text-xl font-bold text-white" for="name">Imię</label>
-                            <input id="name" type="text" placeholder="Imię" class="w-full text-darkGrayishLimeGreen text-lg p-4 border-b border-white rounded-lg focus:border-white placeholder:text-grayishLimeGreen placeholder:text-opacity-70 focus:outline-none">
-                            <div class="error"></div>
-                        </div>
-
-                        <div class="flex flex-col space-y-2 input-control">
-                            <label class="text-xl font-bold text-white" for="email">E-mail</label>
-                            <input id="email" type="text" placeholder="E-mail" class="w-full text-darkGrayishLimeGreen text-lg p-4 border-b border-white rounded-lg focus:border-white placeholder:text-grayishLimeGreen placeholder:text-opacity-70 focus:outline-none">
-                            <div class="error"></div>
-                        </div>
-
-                        <div class="flex flex-col space-y-2 input-control">
-                            <label class="text-xl font-bold text-white" for="Name">Name</label>
-                            <textarea name="Wiadomość" id="" cols="3" rows="2" placeholder="Wiadomość"
-                            class="w-full text-darkGrayishLimeGreen text-lg p-4 border-b border-white rounded-lg focus:border-white placeholder:text-grayishLimeGreen placeholder:text-opacity-70 focus:outline-none"></textarea>
-                            <div class="error"></div>
-                        </div>
-
-                        <div class="w-full flex items-center justify-center input-control md:justify-start">
-                            <button type="submit" class="px-9 py-3 text-xl text-grayishLimeGreen border-2 tracking-wide border-white bg-white rounded-full 
-                            hover:text-white hover:bg-darkGrayishLimeGreen hover:border-darkGrayishLimeGreen hover:scale-110 duration-500 ease">
-                                submit
-                            </button>
-                            <div class="error"></div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-   </section>
-   </section>
 
     <!-- footer -->
-    <footer id="footer" class="bg-raven">
+    <footer id="footer" class="bg-raven ">
       <div class="container mx-auto flex flex-col space-y-12 items-center justify-between py-12 px-6
       md:flex-row md:space-x-6 md:space-y-0">
         <!-- logo -->
@@ -208,6 +207,7 @@
       </div>
     </footer>
 
+    <script src="/src/js/validation.js"></script>
     <script src="/src/js/app.js"></script>
   </body>
 </html>

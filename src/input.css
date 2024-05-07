@@ -224,9 +224,45 @@
 input {
     caret-color: #4C6A4B;
 }
+
+.error {
+    color: #F67E7E;
+}
+
+.input-control.valid input {
+    border-width: 2px;
+    border-color: white;
+}
+  
+.input-control.invalid input {
+    border-width: 2px;
+    border-color: #F67E7E;
+}
+
+textarea.valid {
+    border-width: 2px;
+    border-color: white;
+}
+
+textarea.invalid {
+    border-width: 2px;
+    border-color: #F67E7E;
+}
+
+textarea.error-placeholder::placeholder {
+    color: #F67E7E;
+}
+
+.input-control.error-placeholder input::placeholder {
+    color: #F67E7E;
+}
     
 
 @media screen and (max-width: 600px) {
+
+    #header {
+        height: 1200px;
+    }
     
     #prev-btn,
     #next-btn {
