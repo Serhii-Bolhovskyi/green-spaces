@@ -9,13 +9,19 @@ function navToggle() {
     menu.classList.toggle('hidden');
 }
 
+const menuLinks = document.querySelectorAll('.menu-link');
 
-// document.querySelectorAll('.nav-link')
-//     .forEach(link => {
-//         if(link.href === window.location.href) {
-//             link.setAttribute("aria-current", "page");
-//         }
-//     })
+menuLinks.forEach(link => link.addEventListener('click', navToggle))
+
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener("click", function(){
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.removeAttribute('aria-current'); 
+        })
+        this.setAttribute('aria-current', 'page');
+    });
+})
+
 
 const tabs = document.querySelectorAll(".tab");
 const panels = document.querySelectorAll(".panel");

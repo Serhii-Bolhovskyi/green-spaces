@@ -11,8 +11,8 @@
     />
     <link rel="icon" type="images" href="images/favicon-32x32.png" />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <!-- <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png"> -->
 
@@ -33,9 +33,7 @@
           </div>
           <!-- nav -->
           <nav>
-            <ul
-              class="hidden md:flex items-center justify-center space-x-16"
-            >
+            <ul class="hidden md:flex items-center justify-center space-x-16">
               <li>
                 <a
                   href="/src/pages/index.html#aboutUs"
@@ -59,8 +57,10 @@
               </li>
             </ul>
             <!-- Menu Icon -->
-            <button id="menu-btn"
-            class="block md:hidden focus:outline-none hamburger">
+            <button
+              id="menu-btn"
+              class="block md:hidden focus:outline-none hamburger"
+            >
               <span class="hamburger-top"></span>
               <span class="hamburger-middle"></span>
               <span class="hamburger-bottom"></span>
@@ -77,37 +77,47 @@
     </header>
 
     <!-- hamburger menu -->
-    <div id="menu" class="z-10 fixed inset-0 hidden justify-center items-start w-full h-full p-6 bg-black bg-opacity-40">
-      <nav class="w-96 mt-32 bg-grayishLimeGreen space-y-5 py-8 rounded-lg
-      animate__animated animate__fadeInDown">
-          <!-- 1st block -->
-          <ul class="mb-10 flex flex-col items-center justify-center space-y-6 text-white text-2xl font-light">
-              <li>
-                  <a href="/src/pages/index.html#aboutUs">O nas</a>
-              </li>
-              <li>
-                  <a href="/src/pages/index.html#service">Usługi</a>
-              </li>
-              <li>
-                <a href="/src/pages/index.html#gallery">Galeria</a>
-            </li>
-          </ul>
-          <div
-            class="hover:scale-105 text-white rounded-md text-center"
+    <div
+      id="menu"
+      class="z-10 fixed inset-0 hidden justify-center items-start w-full h-full p-6 bg-black bg-opacity-40"
+    >
+      <nav
+        class="w-96 mt-32 bg-grayishLimeGreen space-y-5 py-8 rounded-lg animate__animated animate__fadeInDown"
+      >
+        <!-- 1st block -->
+        <ul
+          class="mb-10 flex flex-col items-center justify-center space-y-6 text-white text-2xl font-light"
+        >
+          <li>
+            <a href="/src/pages/index.html#aboutUs">O nas</a>
+          </li>
+          <li>
+            <a href="/src/pages/index.html#service">Usługi</a>
+          </li>
+          <li>
+            <a href="/src/pages/index.html#gallery">Galeria</a>
+          </li>
+        </ul>
+        <div class="hover:scale-105 text-white rounded-md text-center">
+          <a
+            href="/src/pages/contact.html"
+            class="border border-white rounded-md text-2xl px-6 py-3"
+            >Kontakt</a
           >
-              <a href="/src/pages/contact.html" class="border border-white rounded-md text-2xl px-6 py-3">Kontakt</a>
-          </div>
+        </div>
       </nav>
     </div>
 
     <!-- Gallery -->
-    <section id="gallery" class="bg-white mt-60 mb-20 flex flex-col items-center md:mt-52">
+    <section
+      id="gallery"
+      class="bg-white mt-60 mb-20 flex flex-col items-center md:mt-52"
+    >
       <h1 class="text-darkGrayishLimeGreen text-5xl text-center">Galeria</h1>
       <!-- container for gallery -->
       <div class="container mx-auto px-6 pt-20 pb-20">
         <!-- container for box -->
         <div class="flex flex-wrap justify-center md:gap-4 gap-y-8">
-
           <!-- 1st box -->
           <div
             class="gallery group item w-[400px] h-[300px] cursor-pointer rounded-lg overflow-hidden"
@@ -355,8 +365,7 @@
             <button id="prev-btn" onclick="changeImage(-1)">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-arrow-big-left-filled
-                hover:scale-105"
+                class="icon icon-tabler icon-tabler-arrow-big-left-filled hover:scale-105"
                 width="44"
                 height="44"
                 viewBox="0 0 24 24"
@@ -377,8 +386,7 @@
             <button id="next-btn" onclick="changeImage(1)">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-arrow-big-right-filled
-                hover:scale-105"
+                class="icon icon-tabler icon-tabler-arrow-big-right-filled hover:scale-105"
                 width="44"
                 height="44"
                 viewBox="0 0 24 24"
@@ -402,23 +410,30 @@
     </section>
 
     <!-- CTA section -->
-    <section id="cta-hero" class="container flex flex-col items-center mx-auto px-6 mt-10 mb-20
-    bg-black bg-opacity-50">
+    <section
+      id="cta-hero"
+      class="container flex flex-col items-center mx-auto px-6 mt-10 mb-20 bg-black bg-opacity-50"
+    >
       <!-- container for element -->
-      <div class="absolute flex flex-col items-center text-center rounded-lg inset-0 bg-black bg-opacity-30">
+      <div
+        class="absolute flex flex-col items-center text-center rounded-lg inset-0 bg-black bg-opacity-30"
+      >
         <h1 class="mt-8 text-white text-5xl">Pracujmy razem</h1>
         <div
-            class="md:mt-16 mt-8 border border-white hover:scale-105 text-white rounded-md px-6 py-3 text-center"
+          class="md:mt-16 mt-8 border border-white hover:scale-105 text-white rounded-md px-6 py-3 text-center"
+        >
+          <a href="/src/pages/contact.html" class="md:text-3xl text-2xl"
+            >Kontakt</a
           >
-            <a href="/src/pages/contact.html" class="md:text-3xl text-2xl">Kontakt</a>
-          </div>
+        </div>
       </div>
     </section>
 
     <!-- footer -->
-    <footer id="footer" class="bg-raven ">
-      <div class="container mx-auto flex flex-col space-y-12 items-center justify-between py-12 px-6
-      md:flex-row md:space-x-6 md:space-y-0">
+    <footer id="footer" class="bg-raven">
+      <div
+        class="container mx-auto flex flex-col space-y-12 items-center justify-between py-12 px-6 md:flex-row md:space-x-6 md:space-y-0"
+      >
         <!-- logo -->
         <div class="w-20 h-20">
           <img src="/images/logo-icon.svg" alt="" />
@@ -459,11 +474,9 @@
           </ul>
         </nav>
         <!-- socila media-->
-        <div
-          class="flex space-x-6 items-center"
-        >
-          <img class="ficon w-10 h-10" src="/images/facebook.svg" alt="">
-          <img class="ficon w-10 h-10" src="/images/gmail.svg" alt="">
+        <div class="flex space-x-6 items-center">
+          <img class="ficon w-10 h-10" src="/images/facebook.svg" alt="" />
+          <img class="ficon w-10 h-10" src="/images/gmail.svg" alt="" />
         </div>
       </div>
     </footer>
