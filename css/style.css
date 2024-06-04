@@ -984,6 +984,11 @@ img {
   border-color: rgb(76 106 75 / var(--tw-border-opacity));
 }
 
+.border-grayishLimeGreen {
+  --tw-border-opacity: 1;
+  border-color: rgb(196 216 192 / var(--tw-border-opacity));
+}
+
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(254 254 254 / var(--tw-border-opacity));

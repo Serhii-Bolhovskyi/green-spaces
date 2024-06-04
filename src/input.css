@@ -10,6 +10,7 @@
     }
 }
 
+
 #header {
     background-image: url('../images/image-hero.jpg');
     background-repeat: no-repeat;
@@ -214,6 +215,7 @@
 .nav-link[aria-current = "page"] {
     color: #C4D8C0;
 }
+
 
 .shadow-contact {
     -webkit-box-shadow: 0px 3px 20px 0px rgba(0,0,0,0.4);
