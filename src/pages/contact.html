@@ -10,6 +10,7 @@
       rel="stylesheet"
     />
     <link rel="icon" type="images" href="images/favicon-32x32.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -19,8 +20,8 @@
     <link rel="stylesheet" href="/css/style.css" />
     <title>Pet Project - Full Page of Gallery</title>
   </head>
-  <body class="relative">
-    <header class="relative" id="header">
+  <body class="relative ">
+    <header class="relative overflow-x-clip" id="header">
       <!-- container for navigation -->
       <div class="fixed z-40 top-0 right-0 left-0 bg-black bg-opacity-65">
         <!-- container for top bar -->
@@ -29,7 +30,9 @@
         >
           <!-- logo -->
           <div class="w-20 h-20">
-            <img src="/images/logo-icon.svg" alt="" />
+            <a href="/src/pages/contact.html">
+              <img src="/images/logo-icon.svg" alt=""/>
+            </a>
           </div>
           <!-- nav -->
           <nav>
@@ -130,7 +133,7 @@
                   <div class="error italic text-lg"></div>
                 </div>
 
-                <div class="flex flex-col space-y-2 input-control">
+                <div class="flex flex-col space-y-2 ">
                   <label class="text-xl font-bold text-white" for="Name"
                     >Name</label
                   >
@@ -140,13 +143,13 @@
                     cols="3"
                     rows="2"
                     placeholder="Wiadomość"
-                    class="w-full text-darkGrayishLimeGreen text-lg p-4 border-b border-white rounded-lg focus:border-white placeholder:text-grayishLimeGreen placeholder:text-opacity-70 focus:outline-none"
+                    class="w-full text-darkGrayishLimeGreen text-lg p-4 border-b border-white rounded-lg focus:border-white placeholder:text-grayishLimeGreen placeholder:text-opacity-70 focus:outline-none text-area"
                   ></textarea>
                   <div class="error italic text-lg"></div>
                 </div>
 
                 <div
-                  class="w-full flex items-center justify-center input-control md:justify-start"
+                  class="w-full flex items-center justify-center  md:justify-start"
                 >
                   <button
                     type="submit"
@@ -160,7 +163,19 @@
           </div>
         </div>
       </section>
-      <!-- </section> -->
+      <!-- toaster after success submit -->
+      <div class="toast">
+        <div class="toast-content">
+          <i class="fa-regular fa-circle-check" style="color: #669c35;"></i>
+          <div class="message">
+            <span class="text text-1">Sukces</span>
+            <span class="text text-2">Wiadomość została wysłana</span>
+          </div>
+        </div>
+        <i class="fa-solid fa-xmark close" style="color: #669c35;"></i>
+        <div class="progress"></div>
+      </div>
+
     </header>
 
     <!-- hamburger menu -->

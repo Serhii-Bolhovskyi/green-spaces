@@ -36,7 +36,53 @@ const setSuccess = element => {
         inputControl.classList.add('valid');
         inputControl.classList.remove('invalid', 'error-placeholder');
     }
+
+    if(allInputsAndTextareasAreValid()) {
+        setToast()
+    }
 };
+
+const allInputsAndTextareasAreValid = () => {
+    const inputs = document.querySelectorAll('.input-control');
+    const textarea = document.querySelector('.text-area');
+    
+    // Check if all inputs have the class 'valid'
+    const allInputsValid = Array.from(inputs).every(input => input.classList.contains('valid'));
+
+    // Check if the textarea has the class 'valid'
+    const textareaIsValid = textarea ? textarea.classList.contains('valid') && textarea.value.trim() !== '' : true;
+    // Return true if all inputs and the textarea are valid
+    return allInputsValid && textareaIsValid;
+};
+
+const toast = document.querySelector('.toast');
+(closeIcon = document.querySelector(".close")),
+(progress = document.querySelector('.progress'));
+
+let timer1, timer2;
+
+function setToast() {
+    toast.classList.add('active');
+    progress.classList.add('active');
+
+    timer1 = setTimeout(() => {
+        toast.classList.remove("active");
+    }, 5000);
+    timer2 = setTimeout(() => {
+        progress.classList.remove("active");
+    }, 5300);
+}
+
+closeIcon.addEventListener("click", () => {
+    toast.classList.remove("active");
+  
+    setTimeout(() => {
+      progress.classList.remove("active");
+    }, 300);
+  
+    clearTimeout(timer1);
+    clearTimeout(timer2);
+});
 
 // Function to validate email format
 const isValidEmail = email => {
@@ -53,7 +99,7 @@ const validateInputs = () => {
     if (nameValue === '') {
         setErrror(name, "Wymagane jest imię");
     } else {
-        setSuccess(name)
+        setSuccess(name);
     };
 
     // validate email
@@ -62,13 +108,13 @@ const validateInputs = () => {
     } else if (!isValidEmail(emailValue)) {
         setErrror(email, "Podaj prawidłowy adres e-mail");
     } else {
-        setSuccess(email)
+        setSuccess(email);
     };
 
     // validare message area
     if (messageValue === '') {
         setErrror(textArea, "Wiadomość jest wymagana");
     } else {
-        setSuccess(textArea)
+        setSuccess(textArea);
     };
 }
