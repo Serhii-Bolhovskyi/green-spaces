@@ -2,11 +2,42 @@ const form = document.getElementById('form');
 const name = document.getElementById('name');
 const email = document.getElementById('email');
 const textArea = document.getElementById('message');
+const contactNum = document.getElementById('contact-number')
 
-form.addEventListener('submit', event => {
-    event.preventDefault();
-    validateInputs();
-});
+// Generate value for 'contact number' in order to send email with different number
+const num = [0,1, 2, 3, 4, 5, 6, 7, 8, 9];
+let generatedNumber = '';
+
+for (let i = 0; i < 6; i++) {
+    const randomIndex = Math.floor(Math.random() * num.length);
+    generatedNumber += num[randomIndex];
+}
+
+contactNum.value = generatedNumber;
+
+// Functionality for send Contact Form to Gmail
+(function() {
+    // https://dashboard.emailjs.com/admin/account
+    emailjs.init({
+      publicKey: "_bmW1Pcr-vGZfK2T7",
+    });
+})();
+
+window.onload = function() {
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        emailjs.sendForm('contact_service', 'contact_form', this)
+        .then(() => {
+            console.log('SUCCESS!');
+        }, (error) => {
+            console.log('FAILED...', error);
+        });
+
+        validateInputs();
+    });
+}
+
 
 const setErrror = (element, message) => {
     const inputControl = element.parentElement;
