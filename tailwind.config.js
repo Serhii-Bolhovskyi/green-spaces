@@ -1,7 +1,7 @@
 module.exports = {
   content: [
     "./src/pages/*.html",
-    ".src.js/*.js"
+    ".src/js/*.js"
   ],
   theme: {
     extend: {
@@ -31,20 +31,9 @@ module.exports = {
       fontFamily: {
         sans: ['Philosopher', 'sans-serif']
       },
-      // imageRendering: {
-      //   pixelated: 'pixelated',
-      // },
     },
   },
   plugins: [
-    // function ({addUtilities}) {
-    //   const newUtilities = {
-    //     '.image-rendering-pixelated': {
-    //       'image-rendering': 'pixelated',
-    //   },
-    //   };
-    //   addUtilities(newUtilities, ['responsive', 'hover']);
-    // }
   ],
 }
 
