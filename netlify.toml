@@ -1,0 +1,10 @@
+[build]
+  # Directory where the built files are located
+  publish = "src/pages"
+  # Command to build the Tailwind CSS
+  command = "npm run build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
