@@ -1,4 +1,4 @@
 [build]
-  publish = "src"
+  publish = "pages"
   command = "npm run build"
 
