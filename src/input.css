@@ -18,6 +18,13 @@
     height: 900px;
 }
 
+#header-contact {
+    background-image: url('../images/image-hero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 900px;
+}
+
 #cta-hero {
     background-image: url('../images/panel-tabs.3.1.jpg');
     max-width: 42rem;
@@ -357,7 +364,7 @@ textarea.error-placeholder::placeholder {
 
 @media screen and (max-width: 600px) {
 
-    #header {
+    #header-contact {
         height: 1200px;
     }
     
