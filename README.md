@@ -13,6 +13,9 @@
 ### Main goal
     The primary objective of “Green Spaces” is to introduce clients to the gardening company and its services. It aims to provide detailed information about the contractor’s offerings and showcase completed projects in a portfolio. The ultimate goal is to encourage potential clients to purchase services or fill out a contact form for further inquiries or collaboration opportunities.
 
+
+
+
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
