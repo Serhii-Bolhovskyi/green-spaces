@@ -19,6 +19,28 @@
 - [Contact](#contact)
 
 ## Features
+- [Scroll-Based Animation and Section Highlighting](#scroll-based-animation-and-section-highlighting)
+- [Navigation and Tab Functionality](#navigation-and-tab-functionality)
+- [Gallery Lightbox Functionality](#gallery-lightbox-functionality)
+- [ Contact Form Validation and Submission](#contact-form-validation-and-submission)
+
+### Scroll-Based Animation and Section Highlighting
+
+1. **Smooth Scrolling**:
+    - Navigation links smooth scroll to their corresponding sections when clicked, enhancing user experience.
+
+2. **Section Highlighting**:
+    - Navigation links are dynamically highlighted based on the currently visible section, providing users with a visual cue of their current location on the page.
+    - The `aria-current` attribute is used to indicate the current section.
+
+3. **Scroll-Based Animations**:
+    - Animations are triggered when specific sections come into view, creating an engaging visual experience.
+    - Different animations for different sections:
+        - **Service Section**: Animations such as `fadeInTopLeft`, `fadeInBottomLeft`, and `fadeInRight` are applied.
+        - **Gallery Section**: Animations such as `fadeInLeft` are applied with varying speeds (`fast`, `faster`).
+
+4. **Viewport Detection**:
+    - The project includes a utility function to detect if an element is within the viewport, ensuring animations are only triggered when the relevant sections are visible.
 
 ### Navigation and Tab Functionality
 
