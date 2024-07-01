@@ -20,6 +20,54 @@
 
 ## Features
 
+### Navigation and Tab Functionality
+
+1. **Responsive Navigation Menu**:
+    - A responsive navigation menu that toggles between showing and hiding when the menu button is clicked.
+    - The menu button and menu items change their state to reflect the menu’s visibility.
+
+2. **Menu Toggle on Click**:
+    - The menu button (`#menu-btn`) toggles the visibility of the navigation menu (`#menu`) by adding or removing CSS classes `flex` and `hidden`.
+    - Menu links also close the menu when clicked, ensuring a smooth user experience on mobile devices.
+
+3. **Tab Navigation**:
+    - A tab navigation system where clicking on a tab header displays the corresponding content panel.
+    - Tabs are styled to show the active tab with a bottom border.
+
+4. **Dynamic Tab Content Switching**:
+    - Clicking on a tab header hides all other content panels and shows the one corresponding to the clicked tab.
+    - The active tab is visually distinguished with a border, indicating the selected state.
+
+
+### Gallery Lightbox Functionality
+
+1. **Lightbox Display**:
+    - Clicking on any image in the gallery opens a lightbox displaying the clicked image in a larger view.
+
+2. **Dynamic Image Loading**:
+    - The lightbox dynamically loads the clicked image and all other images in the same gallery for navigation.
+
+3. **Thumbnail Navigation**:
+    - Thumbnails of the gallery images are displayed within the lightbox, allowing users to navigate directly to any image by clicking its thumbnail.
+    - The currently displayed image's thumbnail is highlighted to indicate its active state.
+
+4. **Keyboard Navigation**:
+    - Users can navigate through images in the lightbox using the left and right arrow keys on the keyboard.
+    - The lightbox supports continuous cycling through images.
+
+5. **Responsive Design**:
+    - The gallery and lightbox are designed to be responsive, ensuring a consistent user experience across different screen sizes.
+
+6. **Close Lightbox**:
+    - The lightbox can be closed by clicking outside the image area, returning the user to the main gallery view.
+
+7. **Image Change on Navigation**:
+    - Users can navigate to the next or previous image within the lightbox using navigation arrows.
+    - The navigation ensures that the current image is updated correctly and the corresponding thumbnail is highlighted.
+
+8. **Visual Feedback for Thumbnails**:
+    - Thumbnails are visually styled to indicate the active image, enhancing user navigation.
+
 ### Contact Form Validation and Submission
 
 This project includes a robust contact form with the following features:
