@@ -92,8 +92,6 @@
 
 ### Contact Form Validation and Submission
 
-This project includes a robust contact form with the following features:
-
 1. **Dynamic Contact Number Generation**:
     - A unique contact number is generated each time the form is used. This number is included in the form submission to ensure each email has a unique identifier.
 
