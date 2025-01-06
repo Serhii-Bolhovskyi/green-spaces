@@ -1,5 +1,5 @@
 
-# Green Spaces - pet project
+# Green Spaces
 ![Image](/images/logo-icon.svg)
 
 ## Description
